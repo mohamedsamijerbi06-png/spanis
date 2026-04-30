@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EspañolTúnez – Aprende Español Fácilmente</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+      <span class="brand-flags">🇪🇸🇹🇳</span>
+      <span class="brand-text" data-key="brand">EspañolTúnez</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#inicio"    data-key="nav_inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#foro"      data-key="nav_foro">Foro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria"   data-key="nav_galeria">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="#local"     data-key="nav_local">Local</a></li>
+        <li class="nav-item"><a class="nav-link" href="#grupo"     data-key="nav_grupo">Grupo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto"  data-key="nav_contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher ms-lg-4 mt-3 mt-lg-0">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO / INICIO ===================== -->
+<section id="inicio" class="hero-section">
+  <!-- Flag overlay background -->
+  <div class="flag-overlay"></div>
+  <div class="hero-particles"></div>
+
+  <div class="container hero-content text-center">
+    <div class="hero-badge mb-3" data-key="hero_badge">🌟 Proyecto Cultural</div>
+    <h1 class="hero-title" data-key="hero_title">Aprende Español<br/><em>Fácilmente</em></h1>
+    <p class="hero-subtitle" data-key="hero_subtitle">
+      Un puente cultural entre Túnez y España. Descubre el idioma,
+      la cultura y la amistad que nos une.
+    </p>
+    <div class="hero-btns d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <a href="#foro" class="btn btn-hero-primary" data-key="hero_cta1">Únete al Foro</a>
+      <a href="#galeria" class="btn btn-hero-secondary" data-key="hero_cta2">Ver Galería</a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats d-flex flex-wrap justify-content-center gap-4 mt-5">
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label" data-key="stat1">Estudiantes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">50+</span>
+        <span class="stat-label" data-key="stat2">Lecciones</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-label" data-key="stat3">Culturas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ===================== FORO ===================== -->
+<section id="foro" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag" data-key="foro_tag">Comunidad</span>
+      <h2 class="section-title" data-key="foro_title">Foro de Discusión</h2>
+      <p class="section-sub" data-key="foro_sub">Comparte tus experiencias, preguntas y consejos sobre el español.</p>
+    </div>
+
+    <!-- Post composer -->
+    <div class="forum-composer mb-4">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="forum-avatar">👤</div>
+        <div class="flex-grow-1">
+          <input type="text" class="form-control forum-name-input mb-2"
+            id="forumAuthor" data-key="foro_name_ph" placeholder="Tu nombre..."/>
+          <textarea class="form-control forum-textarea" id="forumMessage" rows="3"
+            data-key="foro_msg_ph" placeholder="Escribe tu mensaje aquí..."></textarea>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="forum-hint" data-key="foro_hint">Sé amable y respetuoso 🙏</span>
+            <button class="btn btn-post" id="postBtn" data-key="foro_post">Publicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forum posts list -->
+    <div id="forumPosts">
+      <!-- Pre-seeded posts (will be rendered by JS) -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERÍA ===================== -->
+<section id="galeria" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag" data-key="galeria_tag">Visual</span>
+      <h2 class="section-title" data-key="galeria_title">Galería Cultural</h2>
+      <p class="section-sub" data-key="galeria_sub">Imágenes que celebran la unión entre dos culturas.</p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="gallery-filters d-flex flex-wrap justify-content-center gap-2 mb-4">
+      <button class="filter-btn active" data-filter="all"   data-key="gal_all">Todo</button>
+      <button class="filter-btn" data-filter="cultura"     data-key="gal_cultura">Cultura</button>
+      <button class="filter-btn" data-filter="banderas"    data-key="gal_banderas">Banderas</button>
+      <button class="filter-btn" data-filter="personas"    data-key="gal_personas">Personas</button>
+      <button class="filter-btn" data-filter="naturaleza"  data-key="gal_naturaleza">Naturaleza</button>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- Tunisian flag -->
+      <div class="gallery-item" data-cat="banderas">
+        <div class="gal-img-wrap">
+          <img src="bandera-de-túnez-revuelta-cerca.webp"
+               alt="Bandera de Túnez" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_tn">🇹🇳 Bandera de Túnez</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spanish flag -->
+      <div class="gallery-item" data-cat="banderas">
+        <div class="gal-img-wrap">
+          <img src="photo-1676286155301-23733df4dc11.webp"
+               alt="Bandera de España" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_es">🇪🇸 Bandera de España</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toro / Spanish bull -->
+      <div class="gallery-item" data-cat="cultura">
+        <div class="gal-img-wrap">
+          <img src="bullfighter-and-bull.webp"
+               alt="El Toro Español" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_toro">🐂 El Toro Español</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abou El Kacem Chebbi placeholder -->
+      <div class="gallery-item" data-cat="personas">
+        <div class="gal-img-wrap person-card">
+          <div class="person-placeholder">
+            <img src="abu-qasim-al-shabbi-poeta-poesia-tunisia-novecento-romaticismo-arabao-letteratura-cultural-antropologia-amore-indipendenza-primavera-araba-africa-nord-maghreb-francia.webp" alt="">
+            
+          </div>
+          <div class="gal-overlay">
+            <span data-key="chebbi_desc">Gran poeta tunecino</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Farida Quere placeholder -->
+      <div class="gallery-item" data-cat="personas">
+        <div class="gal-img-wrap person-card">
+          <div class="person-placeholder">
+            <img src="download.jpg" alt="Farida">
+          </div>
+          <div class="gal-overlay">
+            <span data-key="farida_desc">Profesora inspiradora</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medina de Túnez -->
+      <div class="gallery-item" data-cat="naturaleza">
+        <div class="gal-img-wrap">
+          <img src="Medina+de+Túnez19.webp"
+               alt="Medina de Túnez" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_medina">🕌 Medina de Túnez</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sagrada Familia -->
+      <div class="gallery-item" data-cat="cultura">
+        <div class="gal-img-wrap">
+          <img src="free-photo-of-sagrada-familia-in-barcelona-under-construction.webp"
+               alt="Sagrada Familia" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_sagrada">⛪ Sagrada Familia, Barcelona</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- El Djem Amphitheatre -->
+      <div class="gallery-item" data-cat="naturaleza">
+        <div class="gal-img-wrap">
+          <img src="amphitheatre-with-el-djem-city-skyline-in-tunisia.webp"
+               alt="El Djem" loading="lazy"/>
+          <div class="gal-overlay">
+            <span data-key="gal_eldjem">🏛️ Anfiteatro de El Djem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload placeholder -->
+      <div class="gallery-item" data-cat="cultura">
+        <div class="gal-img-wrap upload-placeholder" onclick="document.getElementById('imgUpload').click()">
+          <div class="upload-inner">
+            <i class="bi bi-cloud-upload fs-2"></i>
+            <span data-key="gal_upload">Subir imagen</span>
+          </div>
+          <input type="file" id="imgUpload" accept="image/*" hidden onchange="handleUpload(event)"/>
+        </div>
+      </div>
+
+    </div><!-- end gallery-grid -->
+  </div>
+</section>
+
+<!-- ===================== LOCAL ===================== -->
+<section id="local" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag" data-key="local_tag">Ubicación</span>
+      <h2 class="section-title" data-key="local_title">Nuestros Locales</h2>
+      <p class="section-sub" data-key="local_sub">Lugares donde impartimos cursos y organizamos eventos culturales.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="local-card">
+          <div class="local-icon">🏫</div>
+          <h4 data-key="local1_title">escuela secundaria calle el alia lahbib bourguiba  </h4>
+          <p data-key="local1_desc">Avenida Habib Bourguiba, Túnez. Clases todos los sábados de 10h a 12h.</p>
+          <div class="local-meta">
+            <span><i class="bi bi-clock"></i> <span data-key="local1_time">Sáb 10:00–12:00</span></span>
+            <span><i class="bi bi-people"></i> <span data-key="local1_cap">20 plazas</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="local-card featured">
+          <div class="local-badge" data-key="local_featured">⭐ Principal</div>
+          <div class="local-icon">🎓</div>
+          <h4 data-key="local2_title">escuela secundaria calle el alia lahbib bourguiba </h4>
+          
+          <div class="local-meta">
+            <span><i class="bi bi-clock"></i> <span data-key="local2_time">Lun–Vie 9:00–17:00</span></span>
+            <span><i class="bi bi-people"></i> <span data-key="local2_cap">50 plazas</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="local-card">
+          <div class="local-icon">🌐</div>
+          <h4 data-key="local3_title"> Clases en línea</h4>
+          <p data-key="local3_desc">Plataforma virtual disponible 24/7. Accede desde cualquier lugar de Túnez o España.</p>
+          <div class="local-meta">
+            <span><i class="bi bi-clock"></i> <span data-key="local3_time">24/7 Disponible</span></span>
+            <span><i class="bi bi-people"></i> <span data-key="local3_cap">Ilimitado</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GRUPO ===================== -->
+<section id="grupo" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag" data-key="grupo_tag">Equipo</span>
+      <h2 class="section-title" data-key="grupo_title">Nuestro Grupo</h2>
+      <p class="section-sub" data-key="grupo_sub">Las personas apasionadas que hacen posible este proyecto.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🏫</div>
+          <h5 class="member-name">Maram  Kouki </h5>
+          <span class="member-role" data-key="m1_role">Coordinadora del Proyecto</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🏫</div>
+          <h5 class="member-name">Hanen Sgaier </h5>
+          <span class="member-role" data-key="m2_role">Profesora de Español</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🎤</div>
+          <h5 class="member-name">Touka EL Blidi </h5>
+          <span class="member-role" data-key="m3_role">actriz</span>
+          <div class="member-flag">🇪🇸</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">🧔</div>
+          <h5 class="member-name">👉 🧑‍💻🌐 </h5>
+          <span class="member-role" data-key="m4_role">Diseñador Web</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍💼</div>
+          <h5 class="member-name">Sarra Troudi  </h5>
+          <span class="member-role" data-key="m5_role">presentador</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+        <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍💼</div>
+          <h5 class="member-name">Kalthoum Abd El Moula </h5>
+          <span class="member-role" data-key="m6_role">presentador</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🎭</div>
+          <h5 class="member-name">Tayssir Lahbib</h5>
+          <span class="member-role" data-key="m7_role">actriz</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🎭</div>
+          <h5 class="member-name">Lina Lahbib </h5>
+          <span class="member-role" data-key="m8_role">actriz</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">👩‍🎭</div>
+          <h5 class="member-name">Charaf El Blidi</h5>
+          <span class="member-role" data-key="m9_role">actriz</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">💃</div>
+          <h5 class="member-name">Yakine Ben Moussa </h5>
+          <span class="member-role" data-key="m10_role">bailarina</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="member-card">
+          <div class="member-avatar">💃</div>
+          <h5 class="member-name">Zahra  Kouki</h5>
+          <span class="member-role" data-key="m11_role">bailarina</span>
+          <div class="member-flag">🇹🇳</div>
+          <div class="member-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abou El Kacem Chebbi tribute card -->
+      <div class="col-12 mt-3">
+        <div class="tribute-card">
+          <div class="tribute-icon">🖋️</div>
+          <div class="tribute-body">
+            <h4 data-key="tribute_title">Homenaje: Abou El Kacem Chebbi</h4>
+            <p data-key="tribute_quote">
+              "Si el pueblo un día quiere vivir, el destino debe responder…"
+              — Gran poeta tunecino (1909–1934), símbolo de la resistencia y la belleza del alma árabe.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag" data-key="contacto_tag">Contacto</span>
+      <h2 class="section-title" data-key="contacto_title">¡Escríbenos!</h2>
+      <p class="section-sub" data-key="contacto_sub">¿Tienes preguntas o quieres unirte? Estamos aquí para ayudarte.</p>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+
+      <!-- Contact info -->
+      <div class="col-md-5">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong data-key="ci_email">Correo</strong>
+              <span>info@espanoltunez.tn</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong data-key="ci_phone">Teléfono</strong>
+              <span>+216 71 000 000</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong data-key="ci_addr">Dirección</strong>
+              <span data-key="ci_addr_val">Rue de Rome, Túnez 1002</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong data-key="ci_hours">Horario</strong>
+              <span data-key="ci_hours_val">Lunes – Sábado: 9h–17h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="col-md-7">
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label" data-key="form_name">Nombre completo</label>
+            <input type="text" class="form-control custom-input" id="cName"
+                   data-key-ph="form_name_ph" placeholder="Tu nombre..."/>
+            <div class="invalid-feedback" data-key="form_name_err">Por favor, escribe tu nombre.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" data-key="form_email">Correo electrónico</label>
+            <input type="email" class="form-control custom-input" id="cEmail"
+                   data-key-ph="form_email_ph" placeholder="tu@correo.com"/>
+            <div class="invalid-feedback" data-key="form_email_err">Introduce un correo válido.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" data-key="form_msg">Mensaje</label>
+            <textarea class="form-control custom-input" id="cMsg" rows="5"
+                      data-key-ph="form_msg_ph" placeholder="Escribe tu mensaje..."></textarea>
+            <div class="invalid-feedback" data-key="form_msg_err">Por favor, escribe un mensaje.</div>
+          </div>
+          <button type="submit" class="btn btn-submit w-100" data-key="form_submit">
+            <i class="bi bi-send me-2"></i><span>Enviar Mensaje</span>
+          </button>
+          <div id="formSuccess" class="success-msg d-none" data-key="form_success">
+            ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-wave"></div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <div class="footer-brand mb-2">🇪🇸🇹🇳 EspañolTúnez</div>
+        <p class="footer-desc" data-key="footer_desc">
+          Un proyecto cultural que une Túnez y España a través del idioma y la amistad.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="footer-heading" data-key="footer_links">Enlaces rápidos</h6>
+        <ul class="footer-links-list">
+          <li><a href="#inicio" data-key="nav_inicio">Inicio</a></li>
+          <li><a href="#foro" data-key="nav_foro">Foro</a></li>
+          <li><a href="#galeria" data-key="nav_galeria">Galería</a></li>
+          <li><a href="#contacto" data-key="nav_contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="footer-heading" data-key="footer_follow">Síguenos</h6>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider"/>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="mb-0" data-key="footer_copy">© 2025 EspañolTúnez. Todos los derechos reservados.</p>
+      <p class="mb-0 footer-made" data-key="footer_made">Hecho con ❤️ en Túnez &amp; España</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top button -->
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
